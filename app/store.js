@@ -1,8 +1,18 @@
 import List from "./Models/List.js";
+import Task from "./Models/Task.js";
 
 let _state = {
   /** @type {List[]} */
-  lists: []
+  lists: [
+    new List({
+      name: "Homework",
+      tasks: []
+    }),
+    new List({
+      name: "Chores",
+      tasks: []
+    })
+  ]
 };
 
 //NOTE You should not need to change the code from this point down

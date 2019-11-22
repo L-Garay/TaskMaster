@@ -1,10 +1,30 @@
 import { generateId } from "../utils.js";
+import Task from "../Models/Task.js";
 
 export default class List {
-  constructor(data) {
-    //TODO Your constructor takes in a data object that should have the properties you need to create your list here is a freebie, it will set the id its provided, or if that is undefined it will create a new one (this is an alternative to object destructuring)
-    this.id = data.id || generateId();
+  constructor({ id = generateId(), name, tasks }) {
+    this.name = name;
+    this.id = id;
+    this.tasks = tasks.map(t => new Task(t));
   }
-  //Be sure to add the methods needed to create the view template for this model
-  //For starting out, your tasks may be strings alone, but later you may wish to turn them into full objects, that will be up to you
+  get Template() {
+    return `
+    <div class="col-4 mt-2 p-2 border bg-info">
+        <h3 class="text-center border-bottom">${
+          this.name
+        } <button class="btn btn-outline btn-danger ml-1" onclick="app.listController.removeList('${
+      this.id
+    }')">Remove</button></h3>
+        <dl class="ml-3">${this.getTaskTemplates()}</dl>
+    </div>
+          `;
+  }
+
+  getTaskTemplates() {
+    let template = "";
+    this.tasks.forEach(task => {
+      template += task.Template;
+    });
+    return template;
+  }
 }
