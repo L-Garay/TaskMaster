@@ -1,3 +1,38 @@
 body {
   min-height: 100vh;
+  background: cornsilk;
+}
+header {
+  border-bottom: 3px solid aqua;
+}
+.list-btn {
+  padding: 0;
+  float: right;
+}
+
+.submit-btn {
+  font-size: x-small;
+  padding: 3pt;
+  margin-bottom: 0.25rem;
+}
+.form-group {
+  margin-bottom: 0.25rem;
+}
+
+.remove-task {
+  font-size: x-small;
+  padding: 1pt;
+  float: right;
+}
+
+dt {
+  font-weight: 400;
+}
+.quote {
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: aqua;
+  border: 3px dashed bisque;
 }

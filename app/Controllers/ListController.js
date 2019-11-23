@@ -28,9 +28,27 @@ export default class ListController {
     };
     ListService.addList(newList);
     _drawLists();
+    formData.reset();
   }
   removeList(listId) {
     ListService.removeList(listId);
+    _drawLists();
+  }
+
+  addTask(event, listId) {
+    event.preventDefault();
+    let formData = event.target;
+    let newTask = {
+      name: formData.name.value,
+      listId: listId
+    };
+    ListService.addTask(newTask);
+    formData.reset();
+    _drawLists();
+  }
+
+  removeTask(listId, taskId) {
+    ListService.removeTask(listId, taskId);
     _drawLists();
   }
 }

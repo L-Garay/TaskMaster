@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/style.css" />
     <title>Listmon</title>
   </head>
@@ -15,15 +19,15 @@
   <body>
     <header class="container h-15">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 text-center">
           <h1>List on List on List</h1>
         </div>
       </div>
     </header>
     <main>
-      <div class="container-fluid h-15">
+      <div class="container-fluid h-15 mt-3">
         <div class="row">
-          <div class="col-4">
+          <div class="col-6 col-md-4">
             <form onsubmit="app.listController.addList(event)">
               <div class="form-group">
                 <label for="name">Add List</label>
@@ -39,15 +43,22 @@
               </button>
             </form>
           </div>
+          <div class="col-6 col-md-4 offset-md-2 align-self-center">
+            <h3 class="quote">"Do or do not, there is no try."</h3>
+          </div>
         </div>
       </div>
       <div class="container-fluid h-70">
-        <div class="row d-flex justify-content-around" id="lists">
+        <div class="row d-flex justify-content-around p-1" id="lists">
           <!-- List model goes here -->
         </div>
       </div>
     </main>
 
     <script src="app/main.js" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/82e8f37917.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
