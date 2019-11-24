@@ -9,14 +9,14 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"
+      href="https://fonts.googleapis.com/css?family=Marck+Script&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/style.css" />
     <title>Listmon</title>
   </head>
 
-  <body>
+  <body class="img-fluid">
     <header class="container h-15">
       <div class="row">
         <div class="col-12 text-center">
@@ -30,7 +30,7 @@
           <div class="col-6 col-md-4">
             <form onsubmit="app.listController.addList(event)">
               <div class="form-group">
-                <label for="name">Add List</label>
+                <label class="add-lst" for="name">Add List</label>
                 <input
                   type="text"
                   class="form-control"
@@ -38,7 +38,7 @@
                   placeholder="Add a new List"
                 />
               </div>
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" class="btn top-btn">
                 Submit
               </button>
             </form>
@@ -49,13 +49,14 @@
         </div>
       </div>
       <div class="container-fluid h-70">
-        <div class="row d-flex justify-content-around p-1" id="lists">
+        <div class="row p-1" id="lists">
           <!-- List model goes here -->
         </div>
       </div>
     </main>
 
     <script src="app/main.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script
       src="https://kit.fontawesome.com/82e8f37917.js"
       crossorigin="anonymous"

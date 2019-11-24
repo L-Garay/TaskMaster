@@ -9,22 +9,24 @@ export default class List {
   }
   get Template() {
     return `
-    <div class="col-6 col-md-3 mt-2 p-2 border bg-info">
+    <div class="col-6 col-md-4 mt-2 p-2 list-cols">
+      
         <h4 class="border-bottom">${
           this.name
-        } <button class="btn btn-outline btn-danger btn-sm list-btn ml-1" onclick="app.listController.removeList('${
+        } <button class="btn btn-outline btn-sm list-btn ml-1" onclick="app.listController.removeList('${
       this.id
     }')"><i class="fas fa-skull-crossbones fa-xs"></i></button></h4>
-    <form class="border-bottom" onsubmit="app.listController.addTask(event, '${
-      this.id
-    }')">
+        <form class="border-bottom" onsubmit="app.listController.addTask(event, '${
+          this.id
+        }')">
         <div class="form-group">
           <label for="name">New Task</label>
           <input type="text" class="form-control" id="name" placeholder="Enter task" />
         </div>
-        <button type="submit" class="btn btn-primary submit-btn">Submit</button>
-    </form>
-    <dl class="ml-3 mt-2">${this.getTaskTemplates()}</dl>
+        <button type="submit" class="btn submit-btn">Submit</button>
+        </form>
+        <dl class="ml-3 mt-2">${this.getTaskTemplates()}</dl>
+      
     </div>
           `;
   }

@@ -31,8 +31,23 @@ export default class ListController {
     formData.reset();
   }
   removeList(listId) {
-    ListService.removeList(listId);
-    _drawLists();
+    swal({
+      title: "Are you sure about this?",
+      text: "I won't tell anyone if you change your mind.",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true
+    }).then(willDelete => {
+      if (willDelete) {
+        swal("Good-on-ya, go celebrate!", {
+          icon: "success"
+        });
+        ListService.removeList(listId);
+        _drawLists();
+      } else {
+        swal("Your mother would be proud!");
+      }
+    });
   }
 
   addTask(event, listId) {
@@ -48,7 +63,22 @@ export default class ListController {
   }
 
   removeTask(listId, taskId) {
-    ListService.removeTask(listId, taskId);
-    _drawLists();
+    swal({
+      title: "Oh really?",
+      text: "Once deleted, there is no going back..",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true
+    }).then(willDelete => {
+      if (willDelete) {
+        swal("Bye-bye! Your task has been eviscerated!", {
+          icon: "success"
+        });
+        ListService.removeTask(listId, taskId);
+        _drawLists();
+      } else {
+        swal("Yeah, that's what I thought.");
+      }
+    });
   }
 }

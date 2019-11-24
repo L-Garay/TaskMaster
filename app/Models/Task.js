@@ -9,7 +9,7 @@ export default class Task {
 
   get Template() {
     return `
-    <dt>${this.name}<button class="btn btn-danger btn-outline remove-task" onclick="app.listController.removeTask('${this.listId}','${this.id}')"><i class="fas fa-backspace fa-xs"></i></button></dt>
+    <dt class="task-list">${this.name}<button class="btn btn-outline remove-task" onclick="app.listController.removeTask('${this.listId}','${this.id}')"><i class="fas fa-backspace fa-xs"></i></button></dt>
     `;
   }
 }

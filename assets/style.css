@@ -1,19 +1,53 @@
 body {
   min-height: 100vh;
-  background: cornsilk;
+  background-image: url("/white-mountains.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 header {
-  border-bottom: 3px solid aqua;
+  border-bottom: 3px solid #537d91;
+  /* color: white;
+  text-shadow: 2px 2px 3px #6ba8a9; */
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #6ba8a9;
+}
+.form-control {
+  background-color: #d9eeec;
+  color: #d9eeec;
+  border-color: #537d91;
+}
+
+.top-btn {
+  font-size: smaller;
+  padding: 4pt;
+  background: rgb(217, 238, 236);
+  border-color: #537d91;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+.add-lst {
+  text-shadow: 1px 1px 2px black;
+  font-size: 18pt;
+  color: #6ba8a9;
+  border-bottom: 1px solid #537d91;
 }
 .list-btn {
   padding: 0;
   float: right;
+  background: #1b2a49;
+  color: white;
 }
 
 .submit-btn {
   font-size: x-small;
   padding: 3pt;
   margin-bottom: 0.25rem;
+  background: #d9eeec;
+  color: white;
+  border-color: #537d91;
+  text-shadow: 1px 1px 2px #1b2a49;
 }
 .form-group {
   margin-bottom: 0.25rem;
@@ -23,6 +57,8 @@ header {
   font-size: x-small;
   padding: 1pt;
   float: right;
+  background: #1b2a49;
+  color: white;
 }
 
 dt {
@@ -30,9 +66,17 @@ dt {
 }
 .quote {
   text-align: center;
-  font-family: "Indie Flower", cursive;
+  font-family: "Marck Script", cursive;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: aqua;
-  border: 3px dashed bisque;
+  background: rgba(0, 0, 51, 0.1);
+  box-shadow: 4px 4px 4px #537d91;
+}
+
+.list-cols {
+  background-color: #6ba8a9;
+  border: 1px solid #537d91;
+}
+.task-list {
+  color: white;
 }
