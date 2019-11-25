@@ -1,8 +1,9 @@
 body {
   min-height: 100vh;
-  background-image: url("/white-mountains.jpg");
+  background-image: url("/dark-mountains.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 header {
   border-bottom: 3px solid #537d91;
@@ -15,10 +16,14 @@ header {
 h1 {
   font-family: "Cinzel Decorative", cursive;
 }
-.form-control {
-  background-color: #d9eeec;
+.card {
+  background-color: #6ba8a9;
   color: #d9eeec;
-  border-color: #537d91;
+  border-color: #d9eeec;
+}
+
+.card-columns {
+  margin: 0 4pt 0 4pt;
 }
 
 .special-form {
@@ -91,7 +96,7 @@ dt {
   font-family: "Italianno", cursive;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: rgb(255, 255, 255, 0.3);
+  background: rgb(255, 255, 255, 0.5);
   box-shadow: 4px 4px 4px #537d91;
   border: 1px solid #537d91;
 }
