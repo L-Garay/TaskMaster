@@ -9,7 +9,7 @@ export default class List {
   }
   get Template() {
     return `
-    <div class="col-6 col-md-4 mt-2 p-2 list-cols">
+    <div class="col-12 col-sm-6 col-md-4 mt-2 p-2 list-cols">
       
         <h4 class="list-title">${
           this.name
