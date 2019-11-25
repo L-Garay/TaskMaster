@@ -6,12 +6,14 @@ body {
 }
 header {
   border-bottom: 3px solid #537d91;
-  /* color: white;
-  text-shadow: 2px 2px 3px #6ba8a9; */
+  text-shadow: 1px 1px 3px #1b2a49;
   color: black;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: #6ba8a9;
+}
+h1 {
+  font-family: "Cinzel Decorative", cursive;
 }
 .form-control {
   background-color: #d9eeec;
@@ -19,6 +21,9 @@ header {
   border-color: #537d91;
 }
 
+.special-form {
+  box-shadow: 2px 2px 3px #537d91;
+}
 .top-btn {
   font-size: smaller;
   padding: 4pt;
@@ -26,18 +31,30 @@ header {
   border-color: #537d91;
   color: white;
   text-shadow: 1px 1px 2px black;
+  font-family: "Cinzel Decorative", cursive;
+  box-shadow: 2px 2px 3px #537d91;
 }
 .add-lst {
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 0.5px 0.5px 1px black;
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #6ba8a9;
   font-size: 18pt;
-  color: #6ba8a9;
   border-bottom: 1px solid #537d91;
 }
 .list-btn {
   padding: 0;
   float: right;
-  background: #1b2a49;
+  color: #d9eeec;
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.list-title {
   color: white;
+  border-bottom: 2px solid white;
+  font-family: "Cinzel Decorative", cursive;
+  text-shadow: 2px 2px 3px #1b2a49;
 }
 
 .submit-btn {
@@ -48,17 +65,22 @@ header {
   color: white;
   border-color: #537d91;
   text-shadow: 1px 1px 2px #1b2a49;
+  font-family: "Cinzel Decorative", cursive;
+  box-shadow: 2px 2px 3px #537d91;
 }
 .form-group {
   margin-bottom: 0.25rem;
+  font-family: "Cinzel Decorative", cursive;
+  color: white;
+  text-shadow: 1px 1px 2px #1b2a49;
 }
 
 .remove-task {
   font-size: x-small;
-  padding: 1pt;
+  padding: 1pt 1pt 0 1pt;
   float: right;
-  background: #1b2a49;
-  color: white;
+
+  color: #d9eeec;
 }
 
 dt {
@@ -66,11 +88,12 @@ dt {
 }
 .quote {
   text-align: center;
-  font-family: "Marck Script", cursive;
+  font-family: "Italianno", cursive;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: rgba(0, 0, 51, 0.1);
+  background: rgb(255, 255, 255, 0.3);
   box-shadow: 4px 4px 4px #537d91;
+  border: 1px solid #537d91;
 }
 
 .list-cols {
@@ -79,4 +102,6 @@ dt {
 }
 .task-list {
   color: white;
+  font-family: "Italianno", cursive;
+  font-size: 1.5rem;
 }

@@ -11,17 +11,17 @@ export default class List {
     return `
     <div class="col-6 col-md-4 mt-2 p-2 list-cols">
       
-        <h4 class="border-bottom">${
+        <h4 class="list-title">${
           this.name
         } <button class="btn btn-outline btn-sm list-btn ml-1" onclick="app.listController.removeList('${
       this.id
-    }')"><i class="fas fa-skull-crossbones fa-xs"></i></button></h4>
+    }')"><i class="far fa-times-circle fa-xs"></i></button></h4>
         <form class="border-bottom" onsubmit="app.listController.addTask(event, '${
           this.id
         }')">
         <div class="form-group">
           <label for="name">New Task</label>
-          <input type="text" class="form-control" id="name" placeholder="Enter task" />
+          <input type="text" class="form-control special-form" id="name" placeholder="Enter task" />
         </div>
         <button type="submit" class="btn submit-btn">Submit</button>
         </form>

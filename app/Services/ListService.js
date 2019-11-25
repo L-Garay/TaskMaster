@@ -4,6 +4,9 @@ import Task from "../Models/Task.js";
 
 //Public
 class ListService {
+  check() {
+    store.saveState();
+  }
   removeTask(listId, taskId) {
     let listRemovedFrom = store.State.lists.find(l => l.id == listId);
     let taskIndex = listRemovedFrom.tasks.findIndex(t => t.id == taskId);

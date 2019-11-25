@@ -81,4 +81,7 @@ export default class ListController {
       }
     });
   }
+  check() {
+    ListService.check();
+  }
 }
